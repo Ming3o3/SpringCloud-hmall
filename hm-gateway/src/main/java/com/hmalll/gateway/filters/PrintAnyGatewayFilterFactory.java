@@ -14,7 +14,7 @@ import reactor.core.publisher.Mono;
 import java.util.List;
 
 @Component
-public class PrintAnyGateFilterFactory extends AbstractGatewayFilterFactory<PrintAnyGateFilterFactory.Config> {
+public class PrintAnyGatewayFilterFactory extends AbstractGatewayFilterFactory<PrintAnyGatewayFilterFactory.Config> {
 
     @Override
     public GatewayFilter apply(Config config) {
@@ -42,12 +42,12 @@ public class PrintAnyGateFilterFactory extends AbstractGatewayFilterFactory<Prin
     private String c;
     }
 
-    public PrintAnyGateFilterFactory() {
-        super(Config.class);
-    }
-
     @Override
     public List<String> shortcutFieldOrder() {
         return List.of("a","b","c");
+    }
+
+    public PrintAnyGatewayFilterFactory() {
+        super(Config.class);
     }
 }
