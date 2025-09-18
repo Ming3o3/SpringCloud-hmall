@@ -9,6 +9,6 @@ import java.util.List;
 
 @FeignClient("cart-service")
 public interface CartClient {
-    @DeleteMapping
-    public void deleteCartItemByIds(@RequestParam("ids") Collection<Long> ids);
+    @DeleteMapping("/carts")
+    public void deleteCartItemByIds(@RequestParam("ids") List<Long> ids);
 }
